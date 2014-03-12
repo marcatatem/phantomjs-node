@@ -63,7 +63,7 @@ pageWrap = (page) -> mkwrap page,
   setZoomFactor: (zoomFactor, cb=->) -> page.zoomFactor = zoomFactor; cb()
 
 _phantom = mkwrap phantom,
-  ['exit'],
+  ['exit', 'memoryUsage'],
   injectJs: (js, cb=->) -> cb phantom.injectJs js
   getCookies: (cb=->) -> cb(phantom.cookies)
   addCookie: (name, value, domain, cb=->) ->
